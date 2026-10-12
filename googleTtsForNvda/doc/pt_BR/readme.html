@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Google TTS Para NVDA</title>
+</head>
+<body>
+	<h1>Google TTS Para NVDA</h1>
+	<p><strong>Autores:</strong> Nguyen Anh Duc, Dao Duc Trung e Pham Hung Vuong</p>
+	<p><strong>Aviso de independência:</strong> o Google TTS Para NVDA é um projeto de acessibilidade independente e de código aberto. Não é afiliado ao Google LLC nem conta com seu patrocínio ou endosso. Google é uma marca comercial do Google LLC.</p>
+	<p>Durante muito tempo, os usuários de leitores de tela desejaram poder usar no NVDA para Windows as vozes conhecidas da tecnologia de texto para fala do Google, de forma semelhante à experiência dos leitores de tela do Android.</p>
+	<p>O <strong>Google TTS Para NVDA</strong> foi criado para realizar esse desejo. Aproveitando a tecnologia de texto para fala do Google por meio do WebAssembly (WASM), executado em segundo plano em um ambiente de execução de navegador Chromium compatível, como Google Chrome, Microsoft Edge ou Brave, este complemento traz vozes do Google conhecidas e naturais para aprimorar seu uso diário do computador.</p>
+	<p>Depois que os pacotes de voz desejados forem baixados, o complemento funciona inteiramente offline no seu computador, oferecendo uma fala responsiva sem exigir conexão contínua com a internet.</p>
+
+	<h2>Principais recursos</h2>
+	<ul>
+		<li><strong>Funcionamento totalmente offline:</strong> a fala é processada localmente depois que os pacotes de voz necessários são baixados.</li>
+		<li><strong>Diversidade de idiomas e vozes:</strong> oferece vários pacotes de voz do Google TTS para os idiomas compatíveis.</li>
+		<li><strong>Resposta rápida e baixa latência:</strong> usa segmentação de texto e armazenamento em buffer de áudio para melhorar a capacidade de resposta do NVDA.</li>
+		<li><strong>Gerenciador de vozes do Google TTS:</strong> navegue, baixe, remova e inspecione pacotes de voz em uma caixa de diálogo acessível.</li>
+		<li><strong>Seleção do ambiente de execução do navegador Chromium:</strong> escolha o Google Chrome, o Microsoft Edge ou o Brave como ambiente de execução do navegador em segundo plano.</li>
+		<li><strong>Perfis de idioma automáticos:</strong> opcionalmente, use perfis por idioma para que idiomas diferentes tenham sua própria voz e seus próprios valores de fala.</li>
+		<li><strong>Atualizações integradas do complemento:</strong> verifique se há atualizações do complemento nas configurações do NVDA, com uma verificação automática opcional a cada inicialização.</li>
+	</ul>
+
+	<h2>Requisitos do sistema</h2>
+	<ul>
+		<li><strong>NVDA:</strong> versão 2024.1 ou mais recente. O complemento é compatível com o NVDA 2024 até o 2026, tanto nas versões de 32 bits (x86) quanto nas de 64 bits (x64).</li>
+		<li><strong>Navegador Chromium:</strong> Google Chrome, Microsoft Edge ou Brave instalado no seu computador. Se você usar o Microsoft Edge como ambiente de execução, o ambiente de execução do Microsoft Edge WebView2 também precisa estar disponível.</li>
+		<li><strong>Sessão interativa do Windows:</strong> não dependa deste complemento onde o ambiente de execução do navegador Chromium não consegue iniciar, como na tela de login do Windows, em contextos de área de trabalho segura, no Windows PE, em ambientes de recuperação ou em outras sessões mínimas do Windows.</li>
+	</ul>
+
+	<h2>Guia de início rápido</h2>
+	<ol>
+		<li>Abra a caixa de diálogo <strong>Selecionar Sintetizador</strong> do NVDA pressionando <kbd>NVDA+Ctrl+S</kbd> e escolha <strong>Google TTS Para NVDA</strong>.</li>
+		<li>Se nenhum pacote de voz estiver instalado, o NVDA exibirá uma mensagem informando que nenhuma voz do Google TTS Para NVDA está instalada. Pressione <strong>OK</strong> para abrir o Gerenciador de vozes do Google TTS e baixar um pacote de voz. Pressione <strong>Cancelar</strong> para continuar usando seu sintetizador atual por enquanto.</li>
+		<li>No Gerenciador de vozes do Google TTS, baixe pelo menos um pacote de voz na aba <strong>Baixar</strong>.</li>
+		<li>Depois do download, abra as <strong>configurações de fala</strong> (<kbd>NVDA+Ctrl+V</kbd>) para selecionar o idioma e a variante de sua preferência.</li>
+	</ol>
+
+	<h2>Gerenciando vozes</h2>
+	<p>Você pode abrir o Gerenciador de vozes do Google TTS a qualquer momento para adicionar ou remover pacotes de voz:</p>
+	<ul>
+		<li>Pressione o atalho <kbd>NVDA+Ctrl+Shift+G</kbd>, ou</li>
+		<li>Vá em <strong>Menu do NVDA &rarr; Ferramentas &rarr; Gerenciador de vozes do Google TTS...</strong></li>
+	</ul>
+	<p>O Gerenciador de vozes do Google TTS tem duas abas:</p>
+	<ul>
+		<li><strong>Instalados:</strong> mostra os pacotes de voz que já estão armazenados no seu computador. A coluna <strong>Estado</strong> indica se cada pacote está <strong>utilizável</strong>, não é compatível com o motor incluído, está sem um pacote necessário, é exigido por outro pacote instalado ou depende de outro pacote.</li>
+		<li><strong>Baixar:</strong> mostra os pacotes que podem ser baixados. A coluna <strong>Estado</strong> explica se um pacote está disponível para baixar, requer outro pacote, já tem o pacote necessário instalado ou é exigido por outros pacotes disponíveis para baixar.</li>
+	</ul>
+	<p>Em cada aba, os controles aparecem nesta ordem: <strong>Filtrar por idioma</strong>, <strong>Marcar todos os pacotes de voz</strong>, a lista de pacotes e, então, <strong>Remover os pacotes de voz marcados</strong> ou <strong>Baixar os pacotes de voz marcados</strong>. A caixa de diálogo também tem uma linha de <strong>Estado</strong> e os botões <strong>Atualizar</strong>, <strong>Abrir a pasta de pacotes de voz</strong> e <strong>Fechar</strong>.</p>
+	<p>Para adicionar vozes, use a aba <strong>Baixar</strong>, marque os pacotes desejados e pressione <strong>Baixar os pacotes de voz marcados</strong>. Para remover vozes, use a aba <strong>Instalados</strong>, marque os pacotes que você não quer mais e pressione <strong>Remover os pacotes de voz marcados</strong>.</p>
+	<p>Alguns pacotes de voz dependem de outro pacote. Quando você baixa um pacote dependente, o Gerenciador de vozes também pode baixar o pacote necessário. Quando você remove um pacote do qual outros pacotes instalados dependem, o Gerenciador de vozes inclui esses pacotes dependentes para que você não fique com vozes inutilizáveis.</p>
+	<p>O Gerenciador de vozes protege você contra a remoção acidental do último pacote de voz utilizável. Se o Google TTS Para NVDA não for o sintetizador atual, o aviso vem com <strong>Não</strong> como opção padrão. Se o Google TTS Para NVDA for o sintetizador atual, o Gerenciador de vozes pede que você mude antes para outro sintetizador e mantém o último pacote utilizável instalado caso você não faça a troca.</p>
+	<p>Você pode usar a caixa de combinação <strong>Filtrar por idioma</strong> em qualquer uma das abas para exibir apenas os pacotes de voz do idioma desejado (por exemplo, português ou inglês) e encontrar vozes mais rapidamente. Além disso, você pode acionar <strong>Abrir a pasta de pacotes de voz</strong> se quiser conferir onde os pacotes de voz ficam armazenados no seu computador.</p>
+	<p>Os downloads e as remoções de vozes são feitos em segundo plano, para que você possa continuar usando o NVDA sem interrupções. Os anúncios de progresso se limitam a marcos gerais e aos resultados finais, de modo que não se repetem a cada pequena mudança de porcentagem.</p>
+
+	<h2>Configuração</h2>
+	<h3>Configurações de fala</h3>
+	<p>A caixa de diálogo de configurações de fala do NVDA (<kbd>NVDA+Ctrl+V</kbd>) oferece a opção <strong>Pausas</strong> para o Google TTS Para NVDA, estejam os perfis de idioma automáticos ativados ou desativados. Quando os perfis de idioma automáticos estão desativados, a caixa de diálogo também oferece:</p>
+	<ul>
+		<li><strong>Voz:</strong> escolha o idioma instalado do Google TTS.</li>
+		<li><strong>Variante:</strong> escolha o nome da voz dentro desse idioma, incluindo as vozes Chrome OS e Google Natural quando estiverem instaladas.</li>
+		<li><strong>Velocidade:</strong> ajusta a velocidade da leitura.</li>
+		<li><strong>Aumento especial de velocidade:</strong> ative para dobrar a velocidade da fala e ler em alta velocidade.</li>
+		<li><strong>Tom:</strong> ajusta o tom da voz.</li>
+		<li><strong>Volume:</strong> ajusta o volume da fala.</li>
+	</ul>
+	<p><strong>Pausas:</strong> escolha se as pausas ficam inalteradas, são encurtadas somente no fim do texto ou são encurtadas ao longo de toda a fala para uma leitura mais rápida. Essa configuração se aplica a toda a fala do Google TTS.</p>
+
+	<h3>Configurações do complemento</h3>
+	<p>Em <strong>Menu do NVDA &rarr; Preferências &rarr; Configurações &rarr; Google TTS Para NVDA</strong>, você pode configurar:</p>
+	<ul>
+		<li><strong>Ambiente de execução do navegador Chromium:</strong> escolha o Google Chrome, o Microsoft Edge ou o Brave como ambiente de execução do navegador Chromium em segundo plano para o complemento. O painel de configurações mostra a disponibilidade dos navegadores.</li>
+		<li><strong>Estado do ambiente de execução do navegador Chromium:</strong> confira o ambiente selecionado, a disponibilidade dos navegadores e o ambiente alternativo ativo, quando algum estiver em uso.</li>
+		<li><strong>Manter o ambiente de execução do navegador do Google TTS pronto em segundo plano:</strong> ative para permitir que o Google TTS prepare o ambiente de execução do navegador e o pacote de voz atual enquanto outro sintetizador está ativo, para que a volta ao Google TTS seja mais rápida. Essa opção vem desativada por padrão. Depois que você ativá-la e pressionar OK ou Aplicar, ela pode aumentar o uso de memória e manter arquivos do ambiente de execução abertos até você desativá-la ou sair do NVDA.</li>
+		<li><strong>Estado do ambiente de execução do navegador em segundo plano:</strong> confira se essa opção está desativada, se é desnecessária porque o Google TTS já é o sintetizador atual ou se está aguardando para iniciar depois que você pressionar OK ou Aplicar.</li>
+		<li><strong>Usar perfis de idioma automáticos:</strong> ativa a seleção automática de perfis e abre os controles de perfil descritos abaixo.</li>
+		<li><strong>Idioma do perfil preferido:</strong> escolha o idioma de perfil ativado que será usado quando uma frase for ambígua. Essa lista pode ficar vazia até que pelo menos um perfil de idioma seja ativado.</li>
+		<li><strong>Perfil de idioma automático:</strong> escolha qual perfil de idioma instalado será editado.</li>
+		<li><strong>Usar este perfil de idioma:</strong> ativa o perfil de idioma selecionado.</li>
+		<li><strong>Variante, Velocidade, Aumento especial de velocidade, Tom, Volume, Percentagem para mudança de tom em maiúsculas, Dizer maiúscula antes de maiúsculas, Bipar em maiúsculas, Usar soletragem melhorada quando suportado:</strong> configure os valores de fala do perfil ativado selecionado.</li>
+		<li><strong>Estado dos perfis de idioma automáticos:</strong> confira se os perfis estão desativados, indisponíveis, sem um perfil selecionado ou ativos.</li>
+		<li><strong>Atualizações:</strong> contém os controles de atualização do complemento descritos abaixo.</li>
+		<li><strong>Verificar automaticamente se há atualizações do complemento ao iniciar o NVDA:</strong> permite que o Google TTS Para NVDA faça uma verificação após a próxima inicialização do NVDA. Vem desativado por padrão.</li>
+		<li><strong>Estado da atualização do complemento:</strong> confira a versão instalada do complemento, se as verificações automáticas na inicialização estão ativadas ou desativadas e se há uma verificação em andamento.</li>
+		<li><strong>Buscar atualizações...</strong>: verifique manualmente se há uma nova versão estável do complemento.</li>
+	</ul>
+	<p>A categoria de configurações do Google TTS Para NVDA também pode ser aberta com um comando personalizado. Nenhum atalho vem atribuído por padrão; atribua um em <strong>Menu do NVDA &rarr; Preferências &rarr; Definir comandos</strong>, na categoria <strong>Google TTS Para NVDA</strong>.</p>
+
+	<h3>Atualizações do complemento</h3>
+	<p>Abra <strong>Menu do NVDA &rarr; Preferências &rarr; Configurações &rarr; Google TTS Para NVDA</strong> e pressione <strong>Buscar atualizações...</strong> para verificar a versão estável mais recente. As verificações manuais mostram uma caixa de diálogo com OK quando o complemento já está atualizado, quando não é possível acessar a conexão com a internet ou quando a resposta de atualização não pode ser compreendida.</p>
+	<p>Quando uma versão mais nova estiver disponível, o Google TTS Para NVDA mostra uma caixa de diálogo <strong>Informações da atualização</strong> com o tamanho do download, a versão mínima do NVDA, a última versão do NVDA testada e o registro de alterações. Escolha <strong>Sim</strong> para baixar o pacote <code>.nvda-addon</code> dentro do NVDA. Durante o download, a caixa de diálogo <strong>Baixando a atualização do Google TTS Para NVDA</strong> mostra o <strong>Estado do download</strong>, uma barra de progresso quando o tamanho é conhecido e o botão <strong>Cancelar</strong>. O complemento verifica o arquivo baixado comparando-o com o tamanho e a soma de verificação SHA256 do manifesto de atualização e, em seguida, abre o instalador de complementos padrão do NVDA.</p>
+	<p>As verificações automáticas na inicialização vêm desativadas por padrão. Se você ativá-las, o Google TTS Para NVDA fará uma verificação após a próxima inicialização do NVDA e permanecerá em silêncio, a menos que haja uma versão mais nova disponível. A verificação manual continua disponível, estejam as verificações automáticas ativadas ou desativadas. Se uma verificação de inicialização já estiver em execução em segundo plano enquanto a categoria de configurações estiver aberta, o botão de verificação manual ficará desativado até que essa verificação termine. Alterar a caixa de seleção <strong>Verificar automaticamente se há atualizações do complemento ao iniciar o NVDA</strong> afeta as próximas inicializações do NVDA e não interrompe uma verificação já em andamento.</p>
+	<p>O atualizador também reconhece pequenas compilações de correção dentro da mesma versão pública. Isso permite que os mantenedores publiquem correções de compatibilidade ou de confiabilidade sem alterar o número de versão exibido, enquanto o NVDA ainda pode oferecer a compilação mais recente quando os metadados da versão indicam que há uma disponível.</p>
+
+	<h3>Perfis de idioma automáticos</h3>
+	<p>Quando <strong>Usar perfis de idioma automáticos</strong> está ativado, as frases detectadas usam os perfis por idioma do complemento em vez das configurações de fala normais do NVDA. Se apenas um perfil de idioma estiver ativado, esse perfil será usado em todas as frases. Suas configurações normais de idioma e variante do Google TTS voltam a ficar disponíveis quando os perfis de idioma automáticos são desativados.</p>
+	<p>Os perfis de idioma automáticos usam bibliotecas do detector CLD2 incluídas para as versões do NVDA de 32 bits (x86) e de 64 bits (x64). Os resultados do CLD2 só são aceitos quando são confiáveis o bastante para um dos idiomas ativados. Se o texto for curto demais ou ambíguo, o complemento usa sinais locais de idioma conservadores, quando disponíveis, e recorre então ao idioma ativado preferido.</p>
+	<ol>
+		<li>Abra <strong>Menu do NVDA &rarr; Preferências &rarr; Configurações &rarr; Google TTS Para NVDA</strong>.</li>
+		<li>Ative <strong>Usar perfis de idioma automáticos</strong>.</li>
+		<li>Vá até <strong>Idioma do perfil preferido</strong>. Apenas os idiomas ativados aparecem nessa lista, portanto ela pode ficar vazia até você ativar um perfil.</li>
+		<li>Selecione um <strong>Perfil de idioma automático</strong>.</li>
+		<li>Marque a caixa de seleção <strong>Usar este perfil de idioma</strong> para cada idioma que você quer que os perfis de idioma automáticos usem. Os perfis de idioma ficam desativados até que essa caixa seja marcada.</li>
+		<li>Para cada idioma ativado, defina <strong>Variante</strong>, <strong>Velocidade</strong>, <strong>Aumento especial de velocidade</strong>, <strong>Tom</strong>, <strong>Volume</strong>, <strong>Percentagem para mudança de tom em maiúsculas</strong>, <strong>Dizer maiúscula antes de maiúsculas</strong>, <strong>Bipar em maiúsculas</strong> e <strong>Usar soletragem melhorada quando suportado</strong>.</li>
+		<li>Volte a <strong>Idioma do perfil preferido</strong> e escolha o idioma ativado que será usado quando uma frase for ambígua.</li>
+	</ol>
+	<p>Velocidade, tom e volume usam controles deslizantes, como nas configurações de fala do NVDA. O tom para letras maiúsculas usa um controle numérico de edição/rotação, para que você possa ajustá-lo com precisão.</p>
+	<p>As configurações gerais do NVDA — como grau de pontuação/símbolos, troca automática de dialeto, anúncio de mudanças de idioma, normalização Unicode, dados do Consórcio Unicode (incluindo emojis), dicionários adicionais de símbolos, descrições de caracteres com atraso e escolhas de modo de fala — permanecem nas configurações de fala do NVDA.</p>
+	<p>O Google TTS ignora os próprios comandos de troca automática de idioma e dialeto do NVDA para este sintetizador, de modo que essas opções globais não forçam o Google TTS a trocar de voz. Use os perfis de idioma automáticos do Google TTS quando quiser a seleção automática de voz/perfil neste complemento. Se a opção <strong>Anunciar mudanças de idioma durante a leitura</strong> do NVDA estiver ativada, os nomes de idioma anunciados seguem a detecção dos perfis de idioma automáticos do Google TTS enquanto os perfis estiverem ativos. Quando os perfis estão desativados, o NVDA ainda pode usar as mudanças de idioma informadas pelos aplicativos para anunciar o idioma e para o processamento de caracteres e símbolos, incluindo dicionários de pontuação e de símbolos, mas o Google TTS não trocará de voz por causa desses comandos.</p>
+	<p>Os perfis de idioma automáticos definem o contexto de idioma antes de o NVDA processar o texto, de modo que a pronúncia de símbolos e o processamento dos dicionários de fala do NVDA permanecem no fluxo normal de fala para o contexto de idioma selecionado.</p>
+	<p>Quando os perfis de idioma automáticos estão desativados, os dicionários de voz do NVDA funcionam normalmente para a variante do Google TTS selecionada no momento. Quando os perfis de idioma automáticos estão ativados, o complemento usa temporariamente o dicionário de voz da variante selecionada em cada perfil de idioma ativado enquanto o NVDA processa aquele segmento. Os dicionários padrão e temporário do NVDA continuam seguindo o comportamento normal do NVDA.</p>
+	<p>Enquanto os perfis de idioma automáticos estiverem ativados, a caixa de diálogo de configurações de fala do NVDA não oferecerá os controles normais de voz, variante, velocidade, aumento especial de velocidade, tom e volume para este sintetizador. Em vez disso, ela mostrará um aviso focalizável que remete à categoria de configurações do Google TTS Para NVDA. A opção <strong>Pausas</strong> continua disponível nas configurações de fala e se aplica a toda a fala do Google TTS. Os comandos normais do anel de configurações de voz, como <kbd>NVDA+Ctrl+setas</kbd> em teclados de desktop ou <kbd>NVDA+Shift+Ctrl+setas</kbd> em teclados de laptop, anunciam esse aviso em vez de alterar a voz ou os valores de fala do Google TTS nesse modo. O Google TTS também usa as opções de maiúsculas e de soletração de cada perfil ativado enquanto os perfis de idioma automáticos estiverem ativos; os valores normais das configurações de fala voltam a ficar disponíveis quando os perfis de idioma automáticos são desativados. As mensagens de estado na categoria de configurações do Google TTS Para NVDA também podem ser alcançadas com Tab, para que os leitores de tela possam anunciá-las.</p>
+
+	<h2>Solução de problemas: silêncio com o ambiente de execução do Edge</h2>
+	<p>Se você escolher o <strong>Microsoft Edge</strong> como ambiente de execução do navegador Chromium, o Google TTS Para NVDA também verifica se o ambiente de execução do Microsoft Edge WebView2 está disponível. O Edge pode estar instalado enquanto o WebView2 está ausente ou danificado e, nesse caso, o complemento não consegue usar o Edge para a fala. O Google Chrome e o Brave não dependem do WebView2.</p>
+	<p>O WebView2 é o ambiente de execução do Microsoft Edge usado por aplicativos nativos do Windows para hospedar conteúdo da web. Ele tem relação com o Microsoft Edge, mas ter o navegador Edge normal disponível nem sempre significa que o ambiente de execução do WebView2 está instalado e íntegro para cenários de aplicativos. A Microsoft recomenda o ambiente de execução Evergreen do WebView2 para aplicativos, porque ele é compartilhado, atualizado automaticamente, e o pequeno Evergreen Bootstrapper baixa o ambiente de execução correspondente à arquitetura do dispositivo.</p>
+	<p>Quando o WebView2 é necessário, o Google TTS Para NVDA oferece botões para baixar o Evergreen Bootstrapper online da Microsoft, abrir a página do WebView2 da Microsoft para obter instaladores offline ou pacotes de versão fixa, ou deixar a alteração para depois. O NVDA continua usando o sintetizador anterior até que o WebView2 esteja disponível.</p>
+	<p>Se o Windows não conseguir abrir a página de download, o complemento mostra o endereço de download em um campo somente leitura e rotulado, e inclui um botão <strong>Copiar link</strong> para que você possa colar o endereço em um navegador manualmente.</p>
+	<p>Em um computador com acesso à internet, baixe o Evergreen Bootstrapper do Microsoft Edge WebView2 aqui: <a href="https://go.microsoft.com/fwlink/p/?LinkId=2124703">Baixar o ambiente de execução do Microsoft Edge WebView2</a>.</p>
+	<p>Execute o instalador, reinicie o NVDA e selecione <strong>Google TTS Para NVDA</strong> novamente. Para instaladores offline ou um pacote de versão fixa do ambiente de execução do WebView2, abra a página do WebView2 da Microsoft: <a href="https://developer.microsoft.com/microsoft-edge/webview2">Microsoft Edge WebView2</a>.</p>
+
+	<h2>Observações</h2>
+	<ul>
+		<li>Você não precisa manter uma janela do Google Chrome, do Microsoft Edge ou do Brave aberta enquanto usa o NVDA. O complemento se conecta e processa a fala automaticamente em segundo plano.</li>
+		<li>Quando o NVDA fala pela primeira vez após a inicialização, as vozes podem levar um breve instante para serem inicializadas.</li>
+	</ul>
+
+	<h2>Contribuições da comunidade</h2>
+	<p>Valorizamos os pull requests da comunidade. Uma contribuição pode ser aceita quando o código funciona de forma confiável, se encaixa na lógica e na interface já existentes do complemento, evita introduzir regressões em outros recursos do complemento, não interfere em outros complementos do NVDA nem no próprio NVDA, não enfraquece a segurança do complemento e não coleta dados do usuário sem permissão.</p>
+
+	<h2>Suporte e contato</h2>
+	<p>Se você tiver dúvidas, comentários ou precisar de ajuda, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento:</p>
+	<ul>
+		<li><strong>Nguyen Anh Duc:</strong> <a href="mailto:ducna1803@gmail.com">ducna1803@gmail.com</a> | <a href="https://t.me/anhduc1803">t.me/anhduc1803</a></li>
+		<li><strong>Dao Duc Trung:</strong> <a href="mailto:trung@ddt.one">trung@ddt.one</a> | <a href="https://t.me/Daoductrung">t.me/Daoductrung</a></li>
+		<li><strong>Pham Hung Vuong:</strong> <a href="mailto:hungvuong106206@gmail.com">hungvuong106206@gmail.com</a> | <a href="https://t.me/phamhungvuong302">t.me/phamhungvuong302</a></li>
+	</ul>
+
+	<h2>Registro de alterações</h2>
+	<h3>Versão 1.0 (29/08/2026)</h3>
+	<ul>
+		<li><strong>Leitura mais rápida e fluida:</strong>
+			<ul>
+				<li>Em textos médios e longos, o complemento agora usa um primeiro trecho mais curto para que a fala comece antes e, em seguida, processa o restante do texto em trechos maiores.</li>
+				<li>O complemento pode reaproveitar o áudio de fala já concluído mantido temporariamente na RAM. Uma pequena quantidade de áudio também é armazenada em buffer antes da reprodução, para reduzir interrupções quando um texto longo é falado pela primeira vez.</li>
+			</ul>
+		</li>
+		<li><strong>Melhor tratamento de textos multilíngues:</strong>
+			<ul>
+				<li>As divisões de frases e expressões agora usam dados mais amplos e oficiais de pontuação e de sistemas de escrita do Unicode 17.0 e do CLDR 48.2. Isso melhora o tratamento de pontuação localizada, abreviações, endereços da web, emojis, chinês, japonês, coreano, tailandês e outros textos que podem não usar espaços com regularidade.</li>
+				<li>O recurso <strong>Usar perfis de idioma automáticos</strong> pode usar essa cobertura mais ampla de sistemas de escrita para selecionar o perfil mais provável com mais precisão quando o texto é curto ou seu idioma é ambíguo.</li>
+				<li>A configuração <strong>Pausas</strong> e as transições entre trechos ficaram mais consistentes, seja o áudio reaproveitado da RAM ou gerado na hora.</li>
+			</ul>
+		</li>
+		<li><strong>Fala mais alta e mais estável:</strong>
+			<ul>
+				<li>O complemento agora usa amplificação fixa para aumentar o volume padrão, evitando subidas e quedas anormais de volume durante a fala. A configuração <strong>Volume</strong> continua proporcional, e a proteção contra picos excessivamente altos foi mantida.</li>
+				<li>A distorção em algumas vozes masculinas já está presente na saída do motor WASM TTS original, portanto o complemento não consegue corrigi-la por pós-processamento. Estas alterações melhoram o volume e a consistência sonora; não têm a intenção de reduzir essa distorção.</li>
+			</ul>
+		</li>
+		<li><strong>Confiabilidade aprimorada:</strong>
+			<ul>
+				<li>Se o ambiente de execução do navegador Chromium ou o motor WASM TTS falhar antes de produzir áudio, o Google TTS descarta o ambiente com falha e tenta novamente uma vez com um novo ambiente. Se o áudio já tiver começado, o complemento não tenta de novo, evitando repetições parciais da fala.</li>
+				<li>A opção <strong>Manter o ambiente de execução do navegador do Google TTS pronto em segundo plano</strong> não preserva mais um ambiente ocupado, desconectado ou com problemas.</li>
+				<li>O complemento agora carrega apenas os próprios componentes incluídos, reduzindo conflitos com componentes de nome semelhante carregados por outros complementos do NVDA.</li>
+				<li>O complemento agora se recupera de forma mais confiável quando o dispositivo de saída de áudio do NVDA muda ou entra em estado de erro, nas versões do NVDA compatíveis.</li>
+			</ul>
+		</li>
+		<li><strong>Componentes e traduções atualizados:</strong>
+			<ul>
+				<li>O motor WASM TTS incluído foi atualizado para a versão 20260820.1.</li>
+				<li>Foram adicionadas as traduções da interface e da documentação do usuário para espanhol e português do Brasil.</li>
+				<li>A interface e a documentação em chinês simplificado foram reescritas para soar mais naturais e seguir a terminologia oficial do NVDA.</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h3>Versão 0.6 (30/07/2026)</h3>
+	<ul>
+		<li><strong>Troca de sintetizador mais rápida:</strong> foi adicionada uma opção para deixar o Google TTS pronto mais rapidamente ao trocar de outro sintetizador. Essa opção vem desativada por padrão; quando ativada, pode aumentar o uso de memória enquanto o NVDA estiver em execução.</li>
+		<li><strong>Preparação em segundo plano:</strong> quando essa opção está ativada, o Google TTS atualiza sua preparação em segundo plano depois que você altera o ambiente de execução do navegador Chromium selecionado ou instala/remove pacotes de voz.</li>
+		<li><strong>Confiabilidade na troca:</strong> maior confiabilidade ao sair do Google TTS para outro sintetizador, especialmente enquanto a fala ou a preparação de voz ainda está sendo interrompida.</li>
+	</ul>
+
+	<h3>Versão 0.5.5 (23/07/2026)</h3>
+	<ul>
+		<li><strong>Perfis de idioma automáticos:</strong> melhor correspondência dos perfis de idioma automáticos entre os códigos de idioma do CLD2 e do Google TTS e seus apelidos, incluindo filipino/tagalo, javanês, códigos antigos do hebraico, variantes do norueguês, árabe e os mapeamentos do chinês simplificado, tradicional e cantonês.</li>
+		<li><strong>DLLs do CLD2 para Windows:</strong> as DLLs do CLD2 para Windows incluídas foram recompiladas com o MSVC em vez do MinGW-w64, de modo que o complemento empacotado não dispara mais a detecção falso-positiva de antivírus observada anteriormente nos testes do VirusTotal.</li>
+	</ul>
+
+	<h3>Versão 0.5 (19/07/2026)</h3>
+	<ul>
+		<li><strong>Atualizações do complemento:</strong> foi adicionada a verificação de atualizações integrada na categoria de configurações do Google TTS Para NVDA, com verificações opcionais na inicialização, informações de atualização localizadas, download do pacote dentro do NVDA, transferência para o instalador de complementos padrão do NVDA e suporte a pequenas compilações de correção dentro da mesma versão pública.</li>
+		<li><strong>Alternativa de ambiente de execução Chromium:</strong> melhor uso de Chrome, Edge e Brave como alternativa, para que o Google TTS Para NVDA possa tentar outro ambiente de execução compatível quando o selecionado não conseguir iniciar ou não estiver pronto. Agora o Edge pode ser ignorado quando o WebView2 está ausente e outro ambiente compatível pode ser usado. O Google TTS Para NVDA também aguarda e tenta novamente quando o navegador ainda está terminando de iniciar, reduzindo falhas raras de início silencioso ou de conexão com o navegador.</li>
+		<li><strong>Compatibilidade com o NVDA:</strong> maior compatibilidade com versões antigas e novas do NVDA em fala, soletração, dicionários de voz, configurações, troca de sintetizador, plugin global e driver do sintetizador. O Google TTS também impede que os comandos de mudança de idioma do NVDA e dos aplicativos troquem as vozes do Google, preservando-os para o anúncio de idioma e o processamento de caracteres e símbolos quando os perfis de idioma automáticos estão desativados.</li>
+		<li><strong>Localização em chinês simplificado, chinês tradicional e russo:</strong> foram adicionadas as traduções da interface e a documentação do usuário em chinês simplificado, chinês tradicional e russo. As localizações em chinês também incluem metadados localizados do complemento.</li>
+		<li><strong>Confiabilidade da fala:</strong> foram corrigidos casos raros em que a fala interrompida podia ser reproduzida de forma incompleta, o controle de Tom foi restaurado para as vozes SeaNet e um erro raro nas configurações de fala após sair do Google TTS foi evitado. Foi adicionada a configuração <strong>Pausas</strong> para o encurtamento opcional de pausas; ative-a na caixa de diálogo de configurações de fala do NVDA (<kbd>NVDA+Ctrl+V</kbd>), com detalhes na seção Configuração.</li>
+		<li><strong>Acessibilidade dos campos de estado:</strong> os campos de estado do ambiente de execução, dos perfis de idioma automáticos, das atualizações, do aviso nas configurações de fala e da alternativa manual de URL ficaram mais fáceis de focalizar e revisar, sem anúncios repetidos com atraso.</li>
+	</ul>
+
+	<h3>Versão 0.4 (16/07/2026)</h3>
+	<ul>
+		<li><strong>Perfis de idioma automáticos:</strong> foram adicionados perfis do Google TTS por idioma, inspirados no <a href="https://play.google.com/store/apps/details?id=com.vnspeak.autotts">Auto TTS</a> do Android. Configure-os na categoria de configurações do Google TTS Para NVDA; cada idioma ativado pode usar sua própria variante, velocidade, aumento especial de velocidade, tom, volume, comportamento para letras maiúsculas e comportamento de soletração, enquanto as configurações de fala normais do NVDA continuam disponíveis quando o recurso está desativado.</li>
+		<li><strong>Compatibilidade com o NVDA:</strong> maior compatibilidade com o NVDA 2024.1 até o 2026, incluindo troca de sintetizador mais segura, ganchos de processamento de fala mais seguros e melhor comportamento quando outro complemento encapsula a seleção de sintetizador do NVDA.</li>
+		<li><strong>Leitura de textos longos multilíngues:</strong> melhor divisão de frases e expressões em textos que usam pontuação não ASCII ou sistemas de escrita com pouco espaçamento entre palavras, incluindo um tratamento de pontuação baseado em Unicode mais abrangente para muitos idiomas.</li>
+		<li><strong>Suporte a ambientes de execução Chromium:</strong> foi adicionado suporte ao ambiente de execução do navegador Brave, o comportamento alternativo entre Chrome, Edge e Brave na categoria de configurações do Google TTS Para NVDA foi aprimorado, e ficou esclarecido que o ambiente de execução do Microsoft Edge WebView2 só é necessário quando o Microsoft Edge é usado.</li>
+		<li><strong>Melhorias na documentação:</strong> foram adicionadas orientações no README do GitHub para definir caminhos personalizados dos executáveis do Chrome, do Edge e do Brave, incluindo passos acessíveis na interface gráfica do Windows, e a solução de problemas do Edge WebView2 foi ampliada tanto na ajuda do complemento quanto na documentação do GitHub.</li>
+		<li><strong>Acessibilidade das configurações:</strong> foi adicionado um comando não atribuído em Definir comandos para abrir diretamente as configurações do Google TTS Para NVDA, os campos de estado foram aprimorados para que os leitores de tela anunciem seus rótulos e mensagens completas de forma mais confiável, e o anel de configurações de voz passou a anunciar o aviso dos perfis de idioma automáticos em vez de alterar valores de voz enquanto o recurso está ativado. Isso mantém os parâmetros de voz gerenciados pelos perfis compatíveis com as configurações de fala normais do NVDA.</li>
+		<li><strong>Seleção de vozes e confiabilidade:</strong> a seleção de Voz e Variante ficou mais clara, o aquecimento das vozes ficou mais seguro, o tratamento de pacotes no Gerenciador de vozes foi aprimorado, o cancelamento da fala ficou mais responsivo, a importação de pacotes de voz ficou mais segura, e nomes de idiomas regionais como Inglês (Nigéria) foram corrigidos.</li>
+	</ul>
+
+	<h3>Versão 0.3 (12/07/2026)</h3>
+	<ul>
+		<li><strong>Seleção do ambiente de execução do navegador Chromium:</strong> foi adicionada uma opção para escolher um ambiente de execução de navegador Chromium compatível diretamente nas configurações do NVDA (<kbd>Menu do NVDA &rarr; Preferências &rarr; Configurações &rarr; Google TTS Para NVDA</kbd>), incluindo o Google Chrome e o Microsoft Edge.</li>
+		<li><strong>Estabilidade de conexão e cache:</strong> o armazenamento do perfil do navegador foi movido para <code>AppData\Local</code>, a fim de preservar o cache WASM compilado entre reinicializações do NVDA e ocultar automaticamente as janelas auxiliares do navegador em segundo plano.</li>
+		<li><strong>Melhorias no Gerenciador de vozes do Google TTS:</strong> foram adicionados uma caixa de combinação <strong>Filtrar por idioma</strong>, o estado de usabilidade e de dependências dos pacotes, uma remoção mais segura de pacotes que deixariam o complemento sem vozes utilizáveis, anúncios de progresso mais discretos, melhor navegação por teclado e gerenciamento de foco para leitores de tela, além da detecção e limpeza automáticas de pacotes de voz órfãos.</li>
+		<li><strong>Capacidade de resposta e confiabilidade da fala:</strong> foi corrigido o corte da fala no primeiro enunciado após a inicialização do NVDA ou a troca de sintetizador, a latência da síntese de fala foi reduzida e o tratamento da interrupção da fala foi aprimorado.</li>
+		<li><strong>Catálogo de vozes expandido:</strong> foram integrados 180 pacotes de voz do Google TTS e os códigos de idioma foram normalizados (160 pacotes podem ser baixados e usados imediatamente, enquanto 20 pacotes ainda não são compatíveis com o motor WASM).</li>
+		<li><strong>Localização e tradução para o vietnamita:</strong> foi implementado um sistema completo de localização e foram adicionadas traduções completas para o vietnamita na interface do usuário e na documentação.</li>
+	</ul>
+
+	<h3>Versão 0.2 (03/07/2026)</h3>
+	<ul>
+		<li>O catálogo de vozes foi expandido para mais de 100 opções de voz, com mais de 40 novos pacotes de idiomas/dialetos e variantes de voz Google Natural.</li>
+		<li>O motor WASM TTS foi atualizado para a versão 20260625.1.</li>
+		<li>Os pacotes de voz foram reordenados em ordem alfabética pelo código de localidade, para facilitar a navegação.</li>
+	</ul>
+
+	<h3>Versão 0.1.5 (02/07/2026)</h3>
+	<ul>
+		<li>Lançamento inicial.</li>
+	</ul>
+	<p>Última edição em 29/08/2026</p>
+</body>
+</html>
