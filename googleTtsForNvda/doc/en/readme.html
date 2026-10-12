@@ -76,16 +76,22 @@
 		<li><strong>Chromium browser runtime status:</strong> Review the selected runtime, browser availability, and the active fallback runtime when one is used.</li>
 		<li><strong>Keep Google TTS browser runtime ready in the background:</strong> Turn on to let Google TTS prepare the browser runtime and current voice package while another synthesizer is active, so switching back to Google TTS can be faster. This setting is off by default. After you turn it on and press OK or Apply, it may use more memory and keep runtime files open until you turn it off or exit NVDA.</li>
 		<li><strong>Background browser runtime status:</strong> Review whether this setting is off, unnecessary because Google TTS is already the current synthesizer, or waiting to start after you press OK or Apply.</li>
-		<li><strong>Use automatic language profiles:</strong> Enable automatic profile selection and open the profile controls described below.</li>
-		<li><strong>Preferred profile language:</strong> Choose the enabled profile language used when a sentence is unclear. This list can be empty until at least one language profile is enabled.</li>
-		<li><strong>Automatic language profile:</strong> Choose which installed language profile to edit.</li>
-		<li><strong>Use this language profile:</strong> Enable the selected language profile.</li>
-		<li><strong>Variant, Rate, Rate boost, Pitch, Volume, Capital pitch change percentage, Say cap before capitals, Beep for capitals, Use spelling functionality if supported:</strong> Configure speech values for the selected enabled profile.</li>
-		<li><strong>Automatic language profiles status:</strong> Review whether profiles are off, unavailable, missing a selected profile, or active.</li>
-		<li><strong>Updates:</strong> Contains the add-on update controls below.</li>
-		<li><strong>Automatically check for add-on updates when NVDA starts:</strong> Let Google TTS For NVDA check once after the next NVDA startup. This is off by default.</li>
-		<li><strong>Add-on update status:</strong> Review the installed add-on version, whether automatic startup checks are on or off, and whether a check is currently running.</li>
-		<li><strong>Check for updates...</strong>: Manually check for the latest stable add-on release.</li>
+		<li><strong>Use automatic language profiles:</strong> Enable automatic profile selection and open the profile controls described below.
+			<ul>
+				<li><strong>Preferred profile language:</strong> Choose the enabled profile language used when a sentence is unclear. This list can be empty until at least one language profile is enabled.</li>
+				<li><strong>Automatic language profile:</strong> Choose which installed language profile to edit.</li>
+				<li><strong>Use this language profile:</strong> Enable the selected language profile.</li>
+				<li><strong>Variant, Rate, Rate boost, Pitch, Volume, Capital pitch change percentage, Say cap before capitals, Beep for capitals, Use spelling functionality if supported:</strong> Configure speech values for the selected enabled profile.</li>
+				<li><strong>Automatic language profiles status:</strong> Review whether profiles are off, unavailable, missing a selected profile, or active.</li>
+			</ul>
+		</li>
+		<li><strong>Updates:</strong> Contains the add-on update controls below.
+			<ul>
+				<li><strong>Automatically check for add-on updates when NVDA starts:</strong> Let Google TTS For NVDA check once after the next NVDA startup. This is off by default.</li>
+				<li><strong>Add-on update status:</strong> Review the installed add-on version, whether automatic startup checks are on or off, and whether a check is currently running.</li>
+				<li><strong>Check for updates...</strong>: Manually check for the latest stable add-on release.</li>
+			</ul>
+		</li>
 	</ul>
 	<p>The Google TTS For NVDA settings category can also be opened with a custom input gesture. It has no shortcut assigned by default; assign one from <strong>NVDA Menu &rarr; Preferences &rarr; Input Gestures</strong> under the <strong>Google TTS For NVDA</strong> category.</p>
 
@@ -140,7 +146,7 @@
 	</ul>
 
 	<h2>Change Log</h2>
-	<h3>Version 1.0 (2026-08-29)</h3>
+	<h3>Version 1.0 (2026-10-12)</h3>
 	<ul>
 		<li><strong>Faster and smoother reading:</strong>
 			<ul>
@@ -171,7 +177,7 @@
 		</li>
 		<li><strong>Updated components and translations:</strong>
 			<ul>
-				<li>Updated the bundled WASM TTS engine to version 20260820.1.</li>
+				<li>Updated the bundled WASM TTS engine to version 20260917.1.</li>
 				<li>Added Spanish and Brazilian Portuguese interface translations and user documentation.</li>
 				<li>Rewrote the Simplified Chinese interface and documentation to sound more natural and follow official NVDA terminology.</li>
 			</ul>
@@ -233,6 +239,6 @@
 	<ul>
 		<li>Initial release.</li>
 	</ul>
-	<p>Last edited on 2026-08-29</p>
+	<p>Last edited on 2026-10-12</p>
 </body>
 </html>
