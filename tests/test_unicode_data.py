@@ -508,6 +508,8 @@ class RenderModuleTests(unittest.TestCase):
         )
         self.assertIn('UNICODE_VERSION = "17.0.0"', result)
         self.assertIn('CLDR_VERSION = "48.2"', result)
+        self.assertIn("https://www.unicode.org/Public/17.0.0/ucd/UCD.zip", result)
+        self.assertIn("https://www.unicode.org/Public/cldr/48.2/cldr-common-48.2.zip", result)
         self.assertIn('"en":', result)
         self.assertIn("Latin", result)
         self.assertIn("SENTENCE_TERMINAL_CODEPOINTS", result)
